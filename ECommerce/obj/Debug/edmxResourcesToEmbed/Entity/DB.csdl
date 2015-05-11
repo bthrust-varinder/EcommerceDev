@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EloadModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EloadEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_User" EntityType="EloadModel.TB_User" />
+    <EntitySet Name="TB_Operator" EntityType="EloadModel.TB_Operator" />
+    <FunctionImport Name="GetProductByOpId" ReturnType="Collection(EloadModel.GetProductByOpId_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TB_Transaction" EntityType="EloadModel.TB_Transaction" />
+    <AssociationSet Name="FK_TB_Transaction_TB_User" Association="EloadModel.FK_TB_Transaction_TB_User">
+      <End Role="TB_User" EntitySet="TB_User" />
+      <End Role="TB_Transaction" EntitySet="TB_Transaction" />
+    </AssociationSet>
+    <EntitySet Name="EWallets" EntityType="EloadModel.EWallet" />
+    <EntitySet Name="TB_Paypal" EntityType="EloadModel.TB_Paypal" />
+    <AssociationSet Name="FK_EWallet_TB_User" Association="EloadModel.FK_EWallet_TB_User">
+      <End Role="TB_User" EntitySet="TB_User" />
+      <End Role="EWallet" EntitySet="EWallets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Paypal_EWallet" Association="EloadModel.FK_TB_Paypal_EWallet">
+      <End Role="EWallet" EntitySet="EWallets" />
+      <End Role="TB_Paypal" EntitySet="TB_Paypal" />
+    </AssociationSet>
+    <EntitySet Name="TB_Product" EntityType="EloadModel.TB_Product" />
+    <AssociationSet Name="FK_TB_Product_TB_Operator" Association="EloadModel.FK_TB_Product_TB_Operator">
+      <End Role="TB_Operator" EntitySet="TB_Operator" />
+      <End Role="TB_Product" EntitySet="TB_Product" />
+    </AssociationSet>
+    <FunctionImport Name="GetProductByOpId1" ReturnType="Collection(EloadModel.GetProductByOpId1_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="TB_User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Active" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MobileNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_Transaction" Relationship="EloadModel.FK_TB_Transaction_TB_User" FromRole="TB_User" ToRole="TB_Transaction" />
+    <NavigationProperty Name="EWallets" Relationship="EloadModel.FK_EWallet_TB_User" FromRole="TB_User" ToRole="EWallet" />
+  </EntityType>
+  <EntityType Name="TB_Operator">
+    <Key>
+      <PropertyRef Name="OperatorId" />
+    </Key>
+    <Property Type="Int32" Name="OperatorId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="OperatorName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_Product" Relationship="EloadModel.FK_TB_Product_TB_Operator" FromRole="TB_Operator" ToRole="TB_Product" />
+  </EntityType>
+  <ComplexType Name="GetProductByOpId_Result">
+    <Property Type="Int32" Name="TB_ProductID" Nullable="false" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="Decimal" Name="Product_Price" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Product_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="OperatorId" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="TB_Transaction">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+    </Key>
+    <Property Type="Int32" Name="TransactionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TransactionNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="UserId" />
+    <Property Type="Int32" Name="ProductId" />
+    <Property Type="String" Name="Status" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Denomination" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ResponseId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PaymentStatus" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_User" Relationship="EloadModel.FK_TB_Transaction_TB_User" FromRole="TB_Transaction" ToRole="TB_User" />
+    <Property Type="DateTime" Name="date" Precision="3" />
+  </EntityType>
+  <Association Name="FK_TB_Transaction_TB_User">
+    <End Type="EloadModel.TB_User" Role="TB_User" Multiplicity="0..1" />
+    <End Type="EloadModel.TB_Transaction" Role="TB_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="TB_Transaction">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EWallet">
+    <Key>
+      <PropertyRef Name="EWalletID" />
+    </Key>
+    <Property Type="Int32" Name="EWalletID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserID" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="0" />
+    <Property Type="String" Name="Active" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_User" Relationship="EloadModel.FK_EWallet_TB_User" FromRole="EWallet" ToRole="TB_User" />
+    <NavigationProperty Name="TB_Paypal" Relationship="EloadModel.FK_TB_Paypal_EWallet" FromRole="EWallet" ToRole="TB_Paypal" />
+  </EntityType>
+  <EntityType Name="TB_Paypal">
+    <Key>
+      <PropertyRef Name="PaypalId" />
+    </Key>
+    <Property Type="Int32" Name="PaypalId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="date" Precision="0" />
+    <Property Type="Int32" Name="TransactionID" />
+    <Property Type="Int32" Name="UserID" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="0" />
+    <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="EWalletID" />
+    <NavigationProperty Name="EWallet" Relationship="EloadModel.FK_TB_Paypal_EWallet" FromRole="TB_Paypal" ToRole="EWallet" />
+  </EntityType>
+  <Association Name="FK_EWallet_TB_User">
+    <End Type="EloadModel.TB_User" Role="TB_User" Multiplicity="0..1" />
+    <End Type="EloadModel.EWallet" Role="EWallet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="EWallet">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Paypal_EWallet">
+    <End Type="EloadModel.EWallet" Role="EWallet" Multiplicity="0..1" />
+    <End Type="EloadModel.TB_Paypal" Role="TB_Paypal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWallet">
+        <PropertyRef Name="EWalletID" />
+      </Principal>
+      <Dependent Role="TB_Paypal">
+        <PropertyRef Name="EWalletID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TB_Product">
+    <Key>
+      <PropertyRef Name="TB_ProductID" />
+    </Key>
+    <Property Type="Int32" Name="TB_ProductID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ProductId" />
+    <Property Type="Decimal" Name="Product_Price" Precision="18" Scale="0" />
+    <Property Type="String" Name="Product_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="OperatorId" />
+    <Property Type="String" Name="IsActive" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_Operator" Relationship="EloadModel.FK_TB_Product_TB_Operator" FromRole="TB_Product" ToRole="TB_Operator" />
+  </EntityType>
+  <Association Name="FK_TB_Product_TB_Operator">
+    <End Type="EloadModel.TB_Operator" Role="TB_Operator" Multiplicity="0..1" />
+    <End Type="EloadModel.TB_Product" Role="TB_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Operator">
+        <PropertyRef Name="OperatorId" />
+      </Principal>
+      <Dependent Role="TB_Product">
+        <PropertyRef Name="OperatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetProductByOpId1_Result">
+    <Property Type="Int32" Name="TB_ProductID" Nullable="false" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="Decimal" Name="Product_Price" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Product_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="OperatorId" Nullable="true" />
+    <Property Type="String" Name="IsActive" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

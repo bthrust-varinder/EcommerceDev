@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EloadModelStoreContainer" CdmEntityContainer="EloadEntities">
+    <EntitySetMapping Name="TB_User">
+      <EntityTypeMapping TypeName="EloadModel.TB_User">
+        <MappingFragment StoreEntitySet="TB_User">
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Operator">
+      <EntityTypeMapping TypeName="EloadModel.TB_Operator">
+        <MappingFragment StoreEntitySet="TB_Operator">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="OperatorName" ColumnName="OperatorName" />
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Transaction">
+      <EntityTypeMapping TypeName="EloadModel.TB_Transaction">
+        <MappingFragment StoreEntitySet="TB_Transaction">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ResponseId" ColumnName="ResponseId" />
+          <ScalarProperty Name="Denomination" ColumnName="Denomination" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TransactionNumber" ColumnName="TransactionNumber" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWallets">
+      <EntityTypeMapping TypeName="EloadModel.EWallet">
+        <MappingFragment StoreEntitySet="EWallet">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EWalletID" ColumnName="EWalletID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Paypal">
+      <EntityTypeMapping TypeName="EloadModel.TB_Paypal">
+        <MappingFragment StoreEntitySet="TB_Paypal">
+          <ScalarProperty Name="EWalletID" ColumnName="EWalletID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="PaypalId" ColumnName="PaypalId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Product">
+      <EntityTypeMapping TypeName="EloadModel.TB_Product">
+        <MappingFragment StoreEntitySet="TB_Product">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="TB_ProductID" ColumnName="TB_ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetProductByOpId1" FunctionName="EloadModel.Store.GetProductByOpId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EloadModel.GetProductByOpId1_Result">
+          <ScalarProperty Name="TB_ProductID" ColumnName="TB_ProductID" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

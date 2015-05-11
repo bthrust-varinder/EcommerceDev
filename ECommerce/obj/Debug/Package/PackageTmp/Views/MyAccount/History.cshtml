@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ECommerce.Entity.TB_Transaction>
+
+@{
+    ViewBag.Title = "History";
+}
+ 
+<div class="row clearfix">
+
+        <div class="clear bottommargin"></div>
+        <div class="col-md-9">
+            <div class="table-responsive clearfix">
+                <h4>Recharge History</h4>
+
+                <table class="table cart">
+                    <thead>
+                        <tr>
+                            <th class="cart-product-name">Date</th>
+                            <th class="cart-product-name">Transaction Number</th>
+                            <th class="cart-product-name">Amount</th>
+                            <th class="cart-product-subtotal">Recharge Status</th>
+                            <th class="cart-product-subtotal">Payment Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in @Model)
+                        {
+                            
+                        <tr class="cart_item">
+
+                            <td class="cart-product-name">
+                                <a href="#">@Convert.ToDateTime(item.date).ToShortDateString()</a>
+                            </td>
+                            <td class="cart-product-name">
+                                <a href="#">@item.TransactionNumber</a>
+                            </td> 
+                            <td class="cart-product-subtotal">
+                                <span class="amount">@item.Denomination</span>
+                            </td>
+                            <td class="cart-product-subtotal">
+                                <span class="amount">@item.Status</span>
+                            </td>
+                            <td class="cart-product-subtotal">
+                                <span class="amount">@item.PaymentStatus</span>
+                            </td>
+                        </tr>
+
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>

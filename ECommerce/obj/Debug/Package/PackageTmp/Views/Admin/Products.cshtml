@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ECommerce.Entity.TB_Product>
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Products";
+}
+
+
+<div class="row clearfix">
+        <div class="col-md-9">
+            <div class="table-responsive clearfix">
+                <h4>Products</h4>
+
+                <table class="table cart">
+                    <thead>
+                        <tr>
+                            <th class="cart-product-name">Product Name</th>
+                            <th class="cart-product-name">Operator</th>
+                            <th class="cart-product-name">Price</th>
+                            <th class="cart-product-subtotal">ProductId</th>
+                            <th class="cart-product-subtotal">Active ?</th>
+                            <th class="cart-product-subtotal">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in @Model)
+                        {
+                            
+                        <tr class="cart_item">
+
+                            <td class="cart-product-name">
+                                <a href="#">@item.Product_Name</a>
+                            </td>
+                            <td class="cart-product-name">
+                                <a href="#">@item.TB_Operator.OperatorName</a>
+                            </td> 
+                            <td class="cart-product-subtotal">
+                                <span class="amount">@item.Product_Price</span>
+                            </td>
+                            <td class="cart-product-subtotal">
+                                <span class="amount">@item.ProductId</span>
+                            </td>
+                            <td class="cart-product-subtotal">
+                                <span class="amount">@item.IsActive</span>
+                            </td>
+                            <td class="cart-product-subtotal">
+                                <a href="/Admin/EditPrpduct/@item.TB_ProductID" >Edit</a> 
+                            </td>
+                        </tr>
+
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>

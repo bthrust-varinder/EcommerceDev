@@ -1,0 +1,170 @@
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ECommerce.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ECommerce.pdb
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Antlr3.Runtime.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.Core.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\EntityFramework.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Microsoft.Data.Edm.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Microsoft.Data.OData.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Newtonsoft.Json.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Net.Http.Formatting.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Spatial.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Helpers.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Http.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Http.OData.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Http.WebHost.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Mvc.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Optimization.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Razor.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.Deployment.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.Razor.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\WebGrease.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\WebMatrix.Data.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\WebMatrix.WebData.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\EntityFramework.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Newtonsoft.Json.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Net.Http.Formatting.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Helpers.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Http.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Http.WebHost.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Mvc.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Razor.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.Deployment.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.Razor.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\WebMatrix.Data.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\WebMatrix.WebData.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.Core.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Web.Http.OData.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Microsoft.Data.Edm.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\Microsoft.Data.OData.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\System.Spatial.xml
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\de\System.Spatial.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\es\System.Spatial.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\fr\System.Spatial.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\it\System.Spatial.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ja\System.Spatial.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ko\System.Spatial.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\ru\System.Spatial.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\obj\Debug\ECommerce.dll
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\obj\Debug\ECommerce.pdb
+C:\Users\varinder\Documents\Visual Studio 2012\Projects\ECommerce\ECommerce\obj\Debug\ECommerce.csprojResolveAssemblyReference.cache
+F:\Projects\ECommerce\ECommerce\bin\ECommerce.dll
+F:\Projects\ECommerce\ECommerce\bin\ECommerce.pdb
+F:\Projects\ECommerce\ECommerce\bin\Antlr3.Runtime.dll
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.AspNet.dll
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.Core.dll
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OAuth.dll
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OpenId.dll
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Projects\ECommerce\ECommerce\bin\EntityFramework.dll
+F:\Projects\ECommerce\ECommerce\bin\Microsoft.Data.Edm.dll
+F:\Projects\ECommerce\ECommerce\bin\Microsoft.Data.OData.dll
+F:\Projects\ECommerce\ECommerce\bin\Microsoft.Web.Infrastructure.dll
+F:\Projects\ECommerce\ECommerce\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Projects\ECommerce\ECommerce\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Projects\ECommerce\ECommerce\bin\Newtonsoft.Json.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Net.Http.Formatting.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Spatial.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Helpers.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Http.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Http.OData.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Http.WebHost.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Mvc.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Optimization.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Razor.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.Deployment.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.dll
+F:\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.Razor.dll
+F:\Projects\ECommerce\ECommerce\bin\WebGrease.dll
+F:\Projects\ECommerce\ECommerce\bin\WebMatrix.Data.dll
+F:\Projects\ECommerce\ECommerce\bin\WebMatrix.WebData.dll
+F:\Projects\ECommerce\ECommerce\bin\EntityFramework.xml
+F:\Projects\ECommerce\ECommerce\bin\Newtonsoft.Json.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Net.Http.Formatting.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Helpers.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Http.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Http.WebHost.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Mvc.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Razor.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.Deployment.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Web.WebPages.Razor.xml
+F:\Projects\ECommerce\ECommerce\bin\WebMatrix.Data.xml
+F:\Projects\ECommerce\ECommerce\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Projects\ECommerce\ECommerce\bin\WebMatrix.WebData.xml
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.AspNet.xml
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.Core.xml
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OAuth.xml
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OpenId.xml
+F:\Projects\ECommerce\ECommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Web.Http.OData.xml
+F:\Projects\ECommerce\ECommerce\bin\Microsoft.Data.Edm.xml
+F:\Projects\ECommerce\ECommerce\bin\Microsoft.Data.OData.xml
+F:\Projects\ECommerce\ECommerce\bin\System.Spatial.xml
+F:\Projects\ECommerce\ECommerce\bin\de\Microsoft.Data.Edm.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\es\Microsoft.Data.Edm.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\it\Microsoft.Data.Edm.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\de\Microsoft.Data.OData.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\es\Microsoft.Data.OData.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\fr\Microsoft.Data.OData.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\it\Microsoft.Data.OData.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\ja\Microsoft.Data.OData.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\ko\Microsoft.Data.OData.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\ru\Microsoft.Data.OData.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\de\System.Spatial.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\es\System.Spatial.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\fr\System.Spatial.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\it\System.Spatial.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\ja\System.Spatial.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\ko\System.Spatial.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\ru\System.Spatial.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\zh-Hans\System.Spatial.resources.dll
+F:\Projects\ECommerce\ECommerce\bin\zh-Hant\System.Spatial.resources.dll
+F:\Projects\ECommerce\ECommerce\obj\Debug\ECommerce.dll
+F:\Projects\ECommerce\ECommerce\obj\Debug\ECommerce.pdb
+F:\Projects\ECommerce\ECommerce\obj\Debug\ECommerce.csprojResolveAssemblyReference.cache

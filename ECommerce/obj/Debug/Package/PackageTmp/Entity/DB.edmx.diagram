@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ff137fe313894a748be862ed9ab1dd2d" Name="Diagram1">
+        <EntityTypeShape EntityType="EloadModel.TB_User" Width="1.5" PointX="4.625" PointY="0.5" />
+        <EntityTypeShape EntityType="EloadModel.TB_Operator" Width="1.5" PointX="0.875" PointY="3.375" />
+        <EntityTypeShape EntityType="EloadModel.TB_Transaction" Width="1.5" PointX="2.6858438787450289" PointY="27.178405699868875" />
+        <AssociationConnector Association="EloadModel.FK_TB_Transaction_TB_User" />
+        <EntityTypeShape EntityType="EloadModel.EWallet" Width="1.5" PointX="8.9046652097742367" PointY="13.8489734296915" />
+        <EntityTypeShape EntityType="EloadModel.TB_Paypal" Width="1.5" PointX="10.450119120278451" PointY="16.058571048108195" />
+        <AssociationConnector Association="EloadModel.FK_EWallet_TB_User" />
+        <AssociationConnector Association="EloadModel.FK_TB_Paypal_EWallet" />
+        <EntityTypeShape EntityType="EloadModel.TB_Product" Width="1.5" PointX="6.7278669116682686" PointY="20.584751749683523" />
+        <AssociationConnector Association="EloadModel.FK_TB_Product_TB_Operator" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

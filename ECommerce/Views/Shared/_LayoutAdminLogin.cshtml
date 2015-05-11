@@ -1,0 +1,173 @@
+﻿ <!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/easy.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/magnific-popup.css" type="text/css" />
+
+    <link rel="stylesheet" href="../../css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--[if lt IE 9]>
+    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../../js/plugins.js"></script>
+
+
+    <script type="text/javascript" src="../../include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="../../include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Document Title
+    ============================================= -->
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="../../images/logo@16.1.png"/>
+    <style>
+        .icon {
+            width: 115px;
+            height: 105px;
+            display: block;
+            float: left;
+            text-indent: -9999px;
+            background-repeat: no-repeat;
+            background-position: top 0;
+            background-image: url(../../images/service-highlight-sprite.png);
+        }
+
+        #hl-speed {
+            background-position: -115px;
+        }
+
+        #hl-trusted {
+            background-position: -345px;
+        }
+
+        #hl-simple {
+            background-position: -230px;
+        }
+    </style>
+</head>
+
+<body class="stretched">
+
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+
+
+        <!-- Top Bar
+        ============================================= -->
+        <div id="top-bar">
+
+            <div class="container clearfix">
+
+                <div class="col_half nobottommargin clearfix">
+
+                    <!-- Top Links
+                    ============================================= -->
+                    <div class="top-links">
+                      
+                    </div>
+                    <!-- .top-links end -->
+
+                </div>
+
+                <div class="col_half fright col_last clearfix nobottommargin">
+
+                    <!-- Top Social
+                    ============================================= -->
+                    <div id="top-social">
+                        <ul>
+                        </ul>
+                    </div>
+                    <!-- #top-social end -->
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- #top-bar end -->
+
+        <!-- Header
+        ============================================= -->
+       
+        <!-- #header end -->
+
+
+        <!-- Page Title
+        ============================================= -->
+        @*<section id="page-title">
+
+            <div class="container clearfix">
+                <h1>My Account</h1>
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li class="active">Login</li>
+                </ol>
+            </div>
+
+        </section>*@<!-- #page-title end -->
+        @RenderSection("featured", required: false)
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+
+                <div class="container clearfix divider-center" style="margin-bottom: 41px;margin-left:35%">
+
+
+                    @RenderBody()
+
+
+                </div> 
+                <div class="clear"></div>
+
+                <div class="divider divider-short divider-center"><i class="icon-circle"></i></div>
+
+        
+                 
+            </div>
+
+        </section>
+          @RenderSection("featuredfooter", required: false)
+     
+        <!-- #content end -->
+
+        <!-- Footer
+        ============================================= -->
+         
+        <!-- #footer end -->
+
+    </div>
+    <!-- #wrapper end -->
+
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script type="text/javascript" src="../../js/functions.js"></script>
+    <script type="text/javascript" src="../../js/handlebars-v2.0.0.js"></script>
+    
+    @RenderSection("scripts", required: false)
+</body>
+</html>

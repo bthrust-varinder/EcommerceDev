@@ -1,0 +1,53 @@
+﻿@model ECommerce.Entity.EWallet
+
+@{
+    ViewBag.Title = "EWallet";
+}
+<div class="col_full">
+
+    <div class="promo promo-light bottommargin">
+                        <h3>Wallet Balance :  <span> @Model.Amount $</span> </h3>
+                        <span>You can recharge your mobile using e-wallet</span>
+                        <a href="/MyAccount/RechargeWallet" class="button button-xlarge button-rounded">Recharge Wallet</a>
+                    </div>
+    <div class="row clearfix">
+
+        <div class="clear bottommargin"></div>
+        <div class="col-md-9">
+            <div class="table-responsive clearfix">
+                <h4>Wallet History</h4>
+
+                <table class="table cart">
+                    <thead>
+                        <tr>
+                            <th class="cart-product-name">Date</th>
+                            <th class="cart-product-name">Amount</th>
+                            <th class="cart-product-subtotal">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in @Model.TB_Paypal.Where(x=>x.TransactionID!=null))
+                        {
+                            
+                        <tr class="cart_item">
+
+                            <td class="cart-product-name">
+                                <a href="#">@Convert.ToDateTime(item.date).ToShortDateString()</a>
+                            </td>
+                            <td class="cart-product-name">
+                                <a href="#">@item.Amount</a>
+                            </td> 
+                            <td class="cart-product-subtotal">
+                                <span class="amount">@item.Type</span>
+                            </td>
+                        </tr>
+
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

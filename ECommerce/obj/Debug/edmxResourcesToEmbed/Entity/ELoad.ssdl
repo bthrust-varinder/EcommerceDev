@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EloadModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="EloadModelStoreContainer">
+    <EntitySet Name="TB_Operator" EntityType="EloadModel.Store.TB_Operator" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TB_Product" EntityType="EloadModel.Store.TB_Product" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TB_Transaction" EntityType="EloadModel.Store.TB_Transaction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TB_User" EntityType="EloadModel.Store.TB_User" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_TB_Product_TB_Operator" Association="EloadModel.Store.FK_TB_Product_TB_Operator">
+      <End Role="TB_Operator" EntitySet="TB_Operator" />
+      <End Role="TB_Product" EntitySet="TB_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Transaction_TB_Product" Association="EloadModel.Store.FK_TB_Transaction_TB_Product">
+      <End Role="TB_Product" EntitySet="TB_Product" />
+      <End Role="TB_Transaction" EntitySet="TB_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Transaction_TB_User" Association="EloadModel.Store.FK_TB_Transaction_TB_User">
+      <End Role="TB_User" EntitySet="TB_User" />
+      <End Role="TB_Transaction" EntitySet="TB_Transaction" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TB_Operator">
+    <Key>
+      <PropertyRef Name="OperatorId" />
+    </Key>
+    <Property Name="OperatorId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OperatorName" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_Product">
+    <Key>
+      <PropertyRef Name="TB_ProductID" />
+    </Key>
+    <Property Name="TB_ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="Product_Price" Type="decimal" />
+    <Property Name="Product_Name" Type="varchar" MaxLength="50" />
+    <Property Name="OperatorId" Type="int" />
+  </EntityType>
+  <EntityType Name="TB_Transaction">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+    </Key>
+    <Property Name="TransactionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionNumber" Type="varchar" MaxLength="50" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="Status" Type="varchar(max)" />
+    <Property Name="Denomination" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_TB_Product_TB_Operator">
+    <End Role="TB_Operator" Type="EloadModel.Store.TB_Operator" Multiplicity="0..1" />
+    <End Role="TB_Product" Type="EloadModel.Store.TB_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Operator">
+        <PropertyRef Name="OperatorId" />
+      </Principal>
+      <Dependent Role="TB_Product">
+        <PropertyRef Name="OperatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Transaction_TB_Product">
+    <End Role="TB_Product" Type="EloadModel.Store.TB_Product" Multiplicity="0..1" />
+    <End Role="TB_Transaction" Type="EloadModel.Store.TB_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Product">
+        <PropertyRef Name="TB_ProductID" />
+      </Principal>
+      <Dependent Role="TB_Transaction">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Transaction_TB_User">
+    <End Role="TB_User" Type="EloadModel.Store.TB_User" Multiplicity="0..1" />
+    <End Role="TB_Transaction" Type="EloadModel.Store.TB_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="TB_Transaction">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

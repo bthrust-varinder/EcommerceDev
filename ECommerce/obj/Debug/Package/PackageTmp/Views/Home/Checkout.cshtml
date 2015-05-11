@@ -1,0 +1,80 @@
+﻿@model ECommerce.Models.RechargeModel
+@{
+    ViewBag.Title = "Checkout";
+}
+<div class="col_full">
+
+
+    <div class="row clearfix">
+
+        <div class="clear bottommargin"></div>
+        <div class="col-md-6">
+            <div class="table-responsive clearfix">
+                <h4>Your Orders</h4>
+
+                <table class="table cart">
+                    <thead>
+                        <tr>
+                            <th class="cart-product-name">Phone</th>
+                            <th class="cart-product-name">Operator</th>
+                            <th class="cart-product-subtotal">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cart_item">
+
+                            <td class="cart-product-name">
+                                <a href="#">@Model.phone</a>
+                            </td>
+                            <td class="cart-product-name">
+                                <a href="#">@Model.Operator</a>
+                            </td>
+
+
+
+                            <td class="cart-product-subtotal">
+                                <span class="amount">$@Model.amount</span>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            @*<div class="table-responsive">
+								<h4>Cart Totals</h4>
+
+								<table class="table cart">
+									<tbody>
+										 
+										<tr class="cart_item">
+											<td class="cart-product-name">
+												<strong>Total</strong>
+											</td>
+
+											<td class="cart-product-name">
+												<span class="amount color lead"><strong>$@Model.amount</strong></span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>*@
+            <div class="accordion clearfix">
+                <div class="acctitle"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>Direct Bank Transfer</div>
+                <div class="acc_content clearfix">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
+
+                <div class="acctitle"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>Cheque Payment</div>
+                <div class="acc_content clearfix">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</div>
+
+                <div class="acctitle"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>Smoovepay</div>
+                <div class="acc_content clearfix">Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur.</div>
+            </div>
+            <a href="/Home/AskForLogin" class="button button-3d fright">Continue</a>
+        </div>
+    </div>
+</div>

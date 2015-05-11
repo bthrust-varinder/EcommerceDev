@@ -1,0 +1,362 @@
+﻿@model ECommerce.Models.RechargeModel
+@{
+    ViewBag.Title = "Eload  - Home";
+}
+<style>
+
+</style>
+
+@section featured {
+    <section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix">
+
+        <div class="swiper-container swiper-parent">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide dark" style="background-image: url('../../images/slider/swiper/3.jpg');">
+                    <div class="container clearfix">
+                        <div class="slider-caption">
+                            <h2 data-caption-animate="fadeInUp" style="color: white">Welcome to Eload</h2>
+                            <p data-caption-animate="fadeInUp" style="color: white;" data-caption-delay="200">Created just what you need. Choose from a wide range of producst &amp; recharge your mobile.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide dark">
+                    <div class="container clearfix">
+                        <div class="slider-caption slider-caption-center">
+                            <h2 data-caption-animate="fadeInUp">E-Wallet</h2>
+                            <p data-caption-animate="fadeInUp" data-caption-delay="200">Put money in e-wallet &amp; recharge your mobile in 20 secs.</p>
+                        </div>
+                    </div>
+                    <div class="video-wrap">
+                        <video poster="../../images/videos/explore-poster.jpg" preload="auto" loop autoplay muted>
+                            <source src='../../images/videos/explore.mp4' type='video/mp4' />
+                            <source src='../../images/videos/explore.webm' type='video/webm' />
+                        </video>
+                        <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url('../../images/slider/swiper/1.jpg'); background-position: center top;">
+                    <div class="container clearfix">
+                        <div class="slider-caption">
+                            <h2 data-caption-animate="fadeInUp" style="color: black">Great Performance</h2>
+                            <p data-caption-animate="fadeInUp" style="color: black;" data-caption-delay="200">You'll be surprised to see your mobile gets recharge in 1 min only.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
+            <div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
+        </div>
+
+        <script>
+            jQuery(document).ready(function ($) {
+                var swiperSlider = new Swiper('.swiper-parent', {
+                    paginationClickable: false,
+                    slidesPerView: 1,
+                    grabCursor: true,
+                    loop: true,
+                    onSwiperCreated: function (swiper) {
+                        $('[data-caption-animate]').each(function () {
+                            var $toAnimateElement = $(this);
+                            var toAnimateDelay = $(this).attr('data-caption-delay');
+                            var toAnimateDelayTime = 0;
+                            if (toAnimateDelay) { toAnimateDelayTime = Number(toAnimateDelay) + 750; } else { toAnimateDelayTime = 750; }
+                            if (!$toAnimateElement.hasClass('animated')) {
+                                $toAnimateElement.addClass('not-animated');
+                                var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                                setTimeout(function () {
+                                    $toAnimateElement.removeClass('not-animated').addClass(elementAnimation + ' animated');
+                                }, toAnimateDelayTime);
+                            }
+                        });
+                        SEMICOLON.slider.swiperSliderMenu();
+                    },
+                    onSlideChangeStart: function (swiper) {
+                        $('[data-caption-animate]').each(function () {
+                            var $toAnimateElement = $(this);
+                            var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                            $toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
+                        });
+                        SEMICOLON.slider.swiperSliderMenu();
+                    },
+                    onSlideChangeEnd: function (swiper) {
+                        $('#slider').find('.swiper-slide').each(function () {
+                            if ($(this).find('video').length > 0) { $(this).find('video').get(0).pause(); }
+                            if ($(this).find('.yt-bg-player').length > 0) { $(this).find('.yt-bg-player').pauseYTP(); }
+                        });
+                        $('#slider').find('.swiper-slide:not(".swiper-slide-active")').each(function () {
+                            if ($(this).find('video').length > 0) {
+                                if ($(this).find('video').get(0).currentTime != 0) $(this).find('video').get(0).currentTime = 0;
+                            }
+                            if ($(this).find('.yt-bg-player').length > 0) {
+                                $(this).find('.yt-bg-player').getPlayer().seekTo($(this).find('.yt-bg-player').attr('data-start'));
+                            }
+                        });
+                        if ($('#slider').find('.swiper-slide.swiper-slide-active').find('video').length > 0) { $('#slider').find('.swiper-slide.swiper-slide-active').find('video').get(0).play(); }
+                        if ($('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').length > 0) { $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').playYTP(); }
+
+                        $('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function () {
+                            var $toAnimateElement = $(this);
+                            var toAnimateDelay = $(this).attr('data-caption-delay');
+                            var toAnimateDelayTime = 0;
+                            if (toAnimateDelay) { toAnimateDelayTime = Number(toAnimateDelay) + 300; } else { toAnimateDelayTime = 300; }
+                            if (!$toAnimateElement.hasClass('animated')) {
+                                $toAnimateElement.addClass('not-animated');
+                                var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                                setTimeout(function () {
+                                    $toAnimateElement.removeClass('not-animated').addClass(elementAnimation + ' animated');
+                                }, toAnimateDelayTime);
+                            }
+                        });
+                    }
+                });
+
+                $('#slider-arrow-left').on('click', function (e) {
+                    e.preventDefault();
+                    swiperSlider.swipePrev();
+                });
+
+                $('#slider-arrow-right').on('click', function (e) {
+                    e.preventDefault();
+                    swiperSlider.swipeNext();
+                });
+            });
+        </script>
+
+    </section>
+}
+
+
+<!-- Contact Form Overlay
+                ============================================= -->
+<div id="contact-form-overlay-mini" class="clearfix" style="float: left; margin-right: 29px;">
+
+
+    <div id="loader" class="owl-carousel owl-loading" style="display:none"></div>
+
+    <div class="fancy-title title-dotted-border">
+        <h3>Recharge Mobile</h3>
+        @ViewBag.Error
+    </div>
+
+    <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+
+    <div id="form">
+    <!-- Contact Form
+                    ============================================= -->
+    @*<form class="nobottommargin" id="template-contactform" name="template-contactform" action="/Home/Index" method="post">*@
+    @using (Html.BeginForm())
+    {
+
+        <div class="clear"></div>
+
+        <div class="col_full">
+            <label for="template-contactform-phone">Phone</label>
+
+            @Html.TextBoxFor(x => x.phone, new { @class = "sm-form-control numberonly" })
+            @Html.ValidationMessageFor(m => m.phone)
+            @*<input type="text" id="phone" name="phone" value="" class="sm-form-control"/>*@
+        </div>
+
+        <div class="col_full">
+            <label for="template-contactform-phone">Confirm Phone</label>
+
+            @Html.TextBoxFor(x => x.confirmPhone, new { @class = "sm-form-control numberonly" })
+            @Html.ValidationMessageFor(m => m.confirmPhone)
+            @*<input type="text" id="phone" name="phone" value="" class="sm-form-control"/>*@
+        </div>
+
+        <div class="col_full">
+            <label for="template-contactform-service">Operator</label>
+            @Html.DropDownListFor(x => x.Operators, ViewBag.OperatorsList as SelectList, "-- Select a Value --", new { @class = "sm-form-control" })
+            @Html.ValidationMessageFor(m => m.Operators)
+        </div>
+        <div class="col_full">
+            <label for="template-contactform-phone">Recharge Amount</label>
+            @Html.TextBoxFor(x => x.amount, new { @class = "sm-form-control numberonly disabled" })
+            <input type="hidden" id="ProductId" name="ProductId" />
+            @Html.ValidationMessageFor(m => m.amount)
+
+        </div>
+        <div class="col_full">
+            <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Submit</button>
+        </div>
+
+ 
+    }
+        </div>
+</div>
+
+<div id="products-container1" class="container clearfix">
+
+
+    <div id="snav-content1" style="margin-left: 25px">
+        <div class="heading-block">
+            <h3>Support Multiple Devices</h3>
+            <span>We support multiple Devices &amp; Layouts.</span>
+        </div>
+        <img src="../../images/others/multiscreen.jpg" alt="Image" class="alignleft" style="max-width: 320px;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo rerum facilis deserunt maxime perspiciatis suscipit numquam ipsam, quisquam nesciunt, expedita voluptas et placeat odio nisi dolorum. Ab minus nam tenetur accusamus eligendi maiores natus ipsum ratione possimus a, nostrum atque!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur tempora perferendis maiores saepe voluptatibus possimus, voluptatum laborum. Veritatis deleniti expedita veniam quo eum commodi laboriosam illo obcaecati sit in, illum saepe neque voluptas quis, ullam porro autem. Qui incidunt amet eum dolores expedita, sit laudantium, saepe. Nam tempore rerum, quibusdam est quia impedit rem unde nostrum voluptatum minus ipsa quam fugiat ullam voluptatibus neque accusamus modi eos veniam. Dolor, reiciendis.</p>
+    </div>
+
+
+    <div id="products-container" class="col_three_fifth bothsidebar nobottommargin" style="margin-left: 25px; max-height: 500px; overflow-y: scroll;">
+
+        <div class="fancy-title title-border">
+            <h3>Products</h3>
+        </div>
+
+        <div id="products" class="events small-thumbs">
+        </div>
+    </div>
+</div>
+
+<script id="assign-template" type="text/x-handlebars-template">
+    <div class="entry clearfix" style="margin: 0 0 13px" data-pdid="{{prjid}}">
+        <div class="entry-c">
+            <div class="entry-title">
+                <h2><a href="javascript:void(0)">{{prdDesc}}</a></h2>
+            </div>
+            <ul class="entry-meta clearfix">
+                <li><span class="label label-warning">Recharge</span></li>
+                <li style="font-size: 21px;float:right"><a href="javascript:void(0)">{{price}} $</a></li>
+                @*<li><a href="#"><i class="icon-map-marker2"></i>Melbourne</a></li>*@
+            </ul>
+            <div class="entry-content" style="float:right;margin-top:12px">
+                <a data-pdid="{{prjid}}" data-price="{{price}}" href="javascript:void(0)" class="btn btn-default selectProduct">Select</a>
+            </div>
+        </div>
+    </div>
+
+</script>
+<!-- Contact Form Overlay End -->
+
+
+
+@section featuredfooter
+{
+    <section id="easy-123">
+        <div class="gr-row row-padded">
+            <div class="col-1-1">
+                <div class="content top-half">
+                    <h1>Easy as 1-2-3</h1>
+
+                </div>
+            </div>
+            <div class="col-1-1">
+                <div class="content bottom-half">
+                    <ul class="clean">
+                        <li>
+                            <p><span><strong>1</strong></span></p>
+                            <strong>Enter Phone Number</strong>
+                        </li>
+                        <li>
+                            <p><span><strong>2</strong></span></p>
+                            <strong>Select Product</strong>
+                        </li>
+                        <li>
+                            <p><span><strong>3</strong></span></p>
+                            <strong>Pay and Recharge</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pay-options">
+        <div class="gr-row row-padded">
+            <h1>Choose how to pay</h1>
+            <h2 class="subheader">Send direct from your bank account or pay by card</h2>
+            <ul class="gr-row">
+                <li class="col-1-3">
+                    <div class="content">
+                        <span class="icon" id="debit-card">Pay with debit card</span>
+                        <h3>Debit card</h3>
+                    </div>
+                </li>
+                <li class="col-1-3">
+                    <div class="content">
+                        <span class="icon" id="credit-card">Pay with credit card</span>
+                        <h3>Credit card</h3>
+                    </div>
+                </li>
+                <li class="col-1-3">
+                    <div class="content" style="width: 103%">
+                        <span class="icon" id="bank-transfer">Pay by bank transfer</span>
+                        <h3>Smoovepay Transfer</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div class="section topmargin-sm nobottommargin">
+
+        <div class="container clearfix">
+
+            <div class="heading-block center">
+                <h3>Testimonials</h3>
+                <span>Check out some of our Client Reviews</span>
+            </div>
+
+            <ul class="testimonials-grid grid-3 clearfix nobottommargin">
+                <li>
+                    <div class="testimonial">
+                        <div class="testi-image">
+                            <a href="#">
+                                <img src="../../images/testimonials/1.jpg" alt="Customer Testimonails"></a>
+                        </div>
+                        <div class="testi-content">
+                            <p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum repellendus!</p>
+                            <div class="testi-meta">
+                                John Doe
+                                            <span>XYZ Inc.</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="testimonial">
+                        <div class="testi-image">
+                            <a href="#">
+                                <img src="../../images/testimonials/2.jpg" alt="Customer Testimonails"></a>
+                        </div>
+                        <div class="testi-content">
+                            <p>Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
+                            <div class="testi-meta">
+                                Collis Ta'eed
+                                            <span>Envato Inc.</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+}
+
+@section scripts {
+
+    @* <script src="~/Scripts/jquery-1.8.2.js"></script>*@
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+    <script src="../../js/Views/GetProducts.js"></script>
+    <script>$(function () {
+    GetProducts.init();
+    //$("#amount").attr("disabled", "disabled");
+    //$('#MyProject').dataTable({
+    //    columnDefs: [{ orderable: false, targets: [1, 3] }],
+    //    pageLength: 10,
+    //    lengthMenu: [[10, 20, 30, -1], [10, 20, 30, 'All']]
+    //});
+    //$('.dataTables_filter input').attr('placeholder', 'Search');
+
+});
+    </script>
+}

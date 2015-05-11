@@ -1,0 +1,61 @@
+﻿@model ECommerce.Models.PayPalModel
+@{
+    ViewBag.Title = "ValidateCommand";
+}
+
+<body>
+    @*<form id="hiddenform" action=@Model.actionURL>
+        @Html.HiddenFor(model => model.cmd)
+        @Html.HiddenFor(model => model.business)
+        @Html.HiddenFor(model => model.no_shipping)
+        @Html.HiddenFor(model => model.@return)
+        @Html.HiddenFor(model => model.cancel_return)
+        @Html.HiddenFor(model => model.notify_url)
+        @Html.HiddenFor(model => model.currency_code)
+
+        <input type="hidden" value="2" name="rm">
+        @Html.HiddenFor(model => model.item_name)
+        @Html.HiddenFor(model => model.amount)
+    </form>*@
+
+    <form  method="post" id="hiddenform" target="smoovpay" action=@Model.actionURL>
+        <!-- For actual LIVE account, use https://secure.smoovpay.com/access -->
+        <input type="hidden" name="action" value="pay" />
+        <input type="hidden" name="currency" value="@Model.currency_code" />
+        <input type="hidden" name="version" value="2.0" />
+
+
+
+        <input type="hidden" name="item_name_1" value="@Model.item_name" />
+        <input type="hidden" name="item_description_1" value="@Model.item_name  - Recharge" />
+        <input type="hidden" name="item_quantity_1" value="1" />
+        <input type="hidden" name="item_amount_1" value="@Model.amount" />
+        <input type="hidden" name="merchant" value="@Model.business" />
+        <input type="hidden" name="ref_id" value="@Model.refid" />
+        <input type="hidden" name="delivery_charge" value="0.00" />
+        <input type="hidden" name="tax_amount" value="0.00" />
+        <input type="hidden" name="tax_percentage" value="0.00" />
+        <!--(Optional) input type="hidden" name="delivery_charge" value="0.00" />-->
+        <!--(Optional) input type="hidden" name="tax_amount" value="0.00" />-->
+        <!--(Optional) input type="hidden" name="tax_percentage " value="8.00" />-->
+
+        <input type="hidden" name="total_amount" value="@Model.amount" />
+        <input type="hidden" name="str_url" value="" />
+        <input type="hidden" name="success_url" value="@Model.successurl" />
+        <input type="hidden" name="cancel_url" value="@Model.cancel_return" />        
+        <input type="hidden" name="signature" value="@Model.signature" />
+        <input type="hidden" name="signature_algorithm" value="sha1" />
+        <input type="image" src="https://www.smoovpay.com/img/btn_smoovpay_v1.png" name="submit" alt="SmoovPay!" />
+    </form>
+    <p style="text-align: center">
+        <h3>Connecting to Smoovpay , please wait …
+        </h3>
+    </p>
+</body>
+@*@Scripts.Render("~/bundles/jquery")*@
+<script type="text/javascript" lang="javascript">
+    $(this.document).ready(function () {
+        var form = $("form");
+         form.submit();
+    });
+</script>

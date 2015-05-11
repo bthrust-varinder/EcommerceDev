@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EloadModelStoreContainer" CdmEntityContainer="EloadEntities">
+    <EntitySetMapping Name="TB_Operator">
+      <EntityTypeMapping TypeName="EloadModel.TB_Operator">
+        <MappingFragment StoreEntitySet="TB_Operator">
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+          <ScalarProperty Name="OperatorName" ColumnName="OperatorName" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Product">
+      <EntityTypeMapping TypeName="EloadModel.TB_Product">
+        <MappingFragment StoreEntitySet="TB_Product">
+          <ScalarProperty Name="TB_ProductID" ColumnName="TB_ProductID" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Transaction">
+      <EntityTypeMapping TypeName="EloadModel.TB_Transaction">
+        <MappingFragment StoreEntitySet="TB_Transaction">
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="TransactionNumber" ColumnName="TransactionNumber" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Denomination" ColumnName="Denomination" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_User">
+      <EntityTypeMapping TypeName="EloadModel.TB_User">
+        <MappingFragment StoreEntitySet="TB_User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

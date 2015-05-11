@@ -1,0 +1,110 @@
+﻿@model ECommerce.Models.PaymentViewModel
+@{
+    ViewBag.Title = "MakePayment";
+}
+
+@section featured
+{
+    <section id="page-title">
+
+        <div class="container clearfix">
+            <h1>Payment Section</h1>
+
+        </div>
+
+    </section>
+}
+<div class="col_full">
+
+
+    <div class="row clearfix">
+        <div class="col-md-12">
+            <div class="table-responsive clearfix">
+                <h4>Your Orders</h4>
+
+                <table class="table cart">
+                    <thead>
+                        <tr>
+                            <th class="cart-product-name">Phone</th>
+                            <th class="cart-product-name">Operator</th>
+                            <th class="cart-product-subtotal">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cart_item">
+
+                            <td class="cart-product-name">
+                                <a href="#">@ViewBag.rechargeModel.phone</a>
+                            </td>
+                            <td class="cart-product-name">
+                                <a href="#">@ViewBag.rechargeModel.Operator</a>
+                            </td>
+                            <td class="cart-product-subtotal">
+                                <span class="amount">$ @ViewBag.rechargeModel.amount</span>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="tabs tabs-bordered clearfix" id="tab-2">
+
+    <ul class="tab-nav clearfix">
+        <li><a href="#tabs-5">SmoovPay</a></li>
+        <li><a href="#tabs-6">Credit Cards</a></li>
+        <li><a href="#tabs-7">Net banking</a></li>
+        <li class="hidden-phone"><a href="#tabs-8">E-Wallet</a></li>
+    </ul>
+
+    <div class="tab-container">
+
+        <div class="tab-content clearfix" id="tabs-5">
+            Paypal Using SmoovPay
+            <br />
+            <br />
+            <br />
+            @*<form action="/PayPal/ValidateCommand">
+                <input type="image" src="https://www.smoovpay.com/img/btn_smoovpay_v1.png" name="submit" alt="SmoovPay!" />
+            </form>*@
+            <a href="/PayPal/ValidateCommand" class="button button-3d fright"><i class="icon-book3"></i>SmoovPay</a>
+        </div>
+        <div class="tab-content clearfix" id="tabs-6">
+            Coming soon.....
+        </div>
+        <div class="tab-content clearfix" id="tabs-7">
+            Coming soon.....
+        </div>
+        <div class="tab-content clearfix" id="tabs-8">
+
+            @if (Model.eWallet == null)
+            {
+                <span>"You have not activated E-Wallet. Please activate it to use this."</span>
+            }
+            else
+            {
+                <span>E-Wallet balance :<b> @Model.eWallet.Amount $</b></span><br />
+                <br />
+                <br />
+                <br />
+                if (Convert.ToDecimal(Model.recharge.amount) > @Model.eWallet.Amount)
+                {
+                <span>You Dont't have sufficent balance in E-Wallet</span>
+                }
+                else
+                {
+                <a href="/Home/PayUsingWallet" class="button button-3d button-rounded button-blue"><i class="icon-book3"></i>Pay Using EWallet</a>
+                }
+            }
+        </div>
+
+    </div>
+
+</div>

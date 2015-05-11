@@ -1,0 +1,10 @@
+﻿@if (@ViewBag.LoggedIn)
+{ 
+         <span>Hello, </span>    @ViewBag.Name
+    <li><a href="/Account/LogOff">Log off</a></li>
+     
+}
+else
+{
+    <li><a href="/Account/Login">Login</a></li>
+}
