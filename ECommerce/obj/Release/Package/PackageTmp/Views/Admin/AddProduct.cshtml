@@ -1,0 +1,59 @@
+﻿@model ECommerce.Entity.TB_Product
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "AddProduct";
+}
+
+
+<div id="contact-form-overlay-mini" class="clearfix" style="float: left">
+
+    <div class="fancy-title title-dotted-border">
+        <h2>Add Product</h2>
+        @ViewBag.Error
+    </div>
+
+    <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+
+    <!-- Contact Form
+                    ============================================= -->
+    @*<form class="nobottommargin" id="template-contactform" name="template-contactform" action="/Home/Index" method="post">*@
+    @using (Html.BeginForm())
+    {
+
+        <div class="clear"></div>
+
+        <div class="col_full">
+            <label for="template-contactform-phone">Product Name</label>
+            @Html.HiddenFor(model => model.TB_ProductID)
+            @Html.TextBoxFor(x => x.Product_Name, new { @class = "sm-form-control numberonly" })
+            @Html.ValidationMessageFor(m => m.Product_Name)
+            @*<input type="text" id="phone" name="phone" value="" class="sm-form-control"/>*@
+        </div>
+        <div class="col_full">
+            <label for="template-contactform-phone">Product ID</label>
+
+            @Html.TextBoxFor(x => x.ProductId, new { @class = "sm-form-control numberonly" })
+            @Html.ValidationMessageFor(m => m.ProductId)
+            @*<input type="text" id="phone" name="phone" value="" class="sm-form-control"/>*@
+        </div>
+
+        <div class="col_full">
+            <label for="template-contactform-service">Operator</label>
+            @Html.DropDownListFor(x => x.OperatorId, ViewBag.OperatorsList as SelectList, "-- Select a Value --", new { @class = "sm-form-control" })
+            @Html.ValidationMessageFor(m => m.OperatorId)
+        </div>
+        <div class="col_full">
+            <label for="template-contactform-phone">Price</label>
+            @Html.TextBoxFor(x => x.Product_Price, new { @class = "sm-form-control numberonly disabled" })
+            <input type="hidden" id="ProductId" name="ProductId" />
+            @Html.ValidationMessageFor(m => m.Product_Price)
+
+        </div>
+        <div class="col_full">
+            <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Submit</button>
+        </div>
+
+@*</form>*@
+    }
+</div>

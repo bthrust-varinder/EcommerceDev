@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "RechargeWallet";
+}
+ <div id="contact-form-overlay-mini" class="clearfix" style="float: left">
+
+    <div class="fancy-title title-dotted-border">
+        <h3>Recharge Wallet</h3>
+        @ViewBag.Error
+    </div>
+
+    <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+
+    <!-- Contact Form
+                    ============================================= -->
+    @*<form class="nobottommargin" id="template-contactform" name="template-contactform" action="/Home/Index" method="post">*@
+    @using (Html.BeginForm())
+    {
+        
+        <div class="clear"></div>
+
+        <div class="col_full">
+            <label for="template-contactform-phone">Amount</label>            
+            
+            <input type="text" id="txn" name="txn" value="" class="sm-form-control"/>
+        </div>
+        <div class="col_full">
+            <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Submit</button>
+        </div>
+        @ViewBag.Message
+@*</form>*@
+    }
+</div>

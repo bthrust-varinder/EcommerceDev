@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="eloadsg" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="eloadsg" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="eloadsg">
+      <s:element name="RequestInput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sClientUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClientPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClientTxID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sProductID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dProductPrice" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCustomerMobileNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNewBalance" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestInputResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RequestInputResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNewBalance" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestAliPayPin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sClientUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClientPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClientTxID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dProductPrice" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCardSerial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCardPIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCardValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNewBalance" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestAliPayPinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RequestAliPayPinResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCardSerial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCardPIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCardValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNewBalance" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sClientUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClientPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dBalance" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckBalanceResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="dBalance" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckTransactionStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sClientUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClientPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClientTxID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTransactionStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTransactionErrorCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMTMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckTransactionStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckTransactionStatusResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTransactionStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTransactionErrorCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMTMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sClientUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClientPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRecieverMSISDN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMessageOut" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dNewBalance" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendSMSResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="dNewBalance" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RequestInputSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestInput" />
+  </wsdl:message>
+  <wsdl:message name="RequestInputSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestInputResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestAliPayPinSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestAliPayPin" />
+  </wsdl:message>
+  <wsdl:message name="RequestAliPayPinSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestAliPayPinResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckBalance" />
+  </wsdl:message>
+  <wsdl:message name="CheckBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckTransactionStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckTransactionStatus" />
+  </wsdl:message>
+  <wsdl:message name="CheckTransactionStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckTransactionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ClientAPIServiceSoap">
+    <wsdl:operation name="RequestInput">
+      <wsdl:input message="tns:RequestInputSoapIn" />
+      <wsdl:output message="tns:RequestInputSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestAliPayPin">
+      <wsdl:input message="tns:RequestAliPayPinSoapIn" />
+      <wsdl:output message="tns:RequestAliPayPinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBalance">
+      <wsdl:input message="tns:CheckBalanceSoapIn" />
+      <wsdl:output message="tns:CheckBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTransactionStatus">
+      <wsdl:input message="tns:CheckTransactionStatusSoapIn" />
+      <wsdl:output message="tns:CheckTransactionStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSSoapIn" />
+      <wsdl:output message="tns:SendSMSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ClientAPIServiceSoap" type="tns:ClientAPIServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RequestInput">
+      <soap:operation soapAction="eloadsg/RequestInput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestAliPayPin">
+      <soap:operation soapAction="eloadsg/RequestAliPayPin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBalance">
+      <soap:operation soapAction="eloadsg/CheckBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTransactionStatus">
+      <soap:operation soapAction="eloadsg/CheckTransactionStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <soap:operation soapAction="eloadsg/SendSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ClientAPIServiceSoap12" type="tns:ClientAPIServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RequestInput">
+      <soap12:operation soapAction="eloadsg/RequestInput" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestAliPayPin">
+      <soap12:operation soapAction="eloadsg/RequestAliPayPin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBalance">
+      <soap12:operation soapAction="eloadsg/CheckBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTransactionStatus">
+      <soap12:operation soapAction="eloadsg/CheckTransactionStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <soap12:operation soapAction="eloadsg/SendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClientAPIService">
+    <wsdl:port name="ClientAPIServiceSoap" binding="tns:ClientAPIServiceSoap">
+      <soap:address location="http://api.eload.sg/connect.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ClientAPIServiceSoap12" binding="tns:ClientAPIServiceSoap12">
+      <soap12:address location="http://api.eload.sg/connect.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

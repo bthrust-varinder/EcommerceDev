@@ -1,0 +1,55 @@
+﻿@model ECommerce.Models.RechargeModel
+
+@{
+    ViewBag.Title = "PayUsingWallet";
+}
+
+<div class="col_full">
+
+
+    <div class="row clearfix">
+
+        <div class="clear bottommargin"></div>
+        <div class="col-md-12">
+            <div class="table-responsive clearfix">
+                <h4>Your Orders</h4>
+
+                <table class="table cart">
+                    <thead>
+                        <tr>
+                            <th class="cart-product-name">Phone</th>
+                            <th class="cart-product-name">Product</th>
+                            <th class="cart-product-subtotal">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cart_item">
+
+                            <td class="cart-product-name">
+                                <a href="#">@Model.phone</a>
+                            </td>
+                            <td class="cart-product-name">
+                                <a href="#">@Model.Operator</a>
+                            </td> 
+                            <td class="cart-product-subtotal">
+                                <span class="amount">$@Model.amount</span>
+                            </td>
+                        </tr> 
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+       
+    </div>
+     <div class="col-md-6">
+          <div class="toggle toggle-border">
+                            <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>@ViewBag.Message</div>
+                            <div class="togglec">@ViewBag.MessageDesc</div>
+                        </div>
+
+            <div></div>
+        </div>
+</div>
+

@@ -1,0 +1,649 @@
+﻿ <!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/easy.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/magnific-popup.css" type="text/css" />
+
+    <link rel="stylesheet" href="../../css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--[if lt IE 9]>
+    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/plugins.js"></script>
+
+
+    <script type="text/javascript" src="../../include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="../../include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Document Title
+    ============================================= -->
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="../../images/logo@16.1.png"/>
+    <style>
+        .icon {
+            width: 115px;
+            height: 105px;
+            display: block;
+            float: left;
+            text-indent: -9999px;
+            background-repeat: no-repeat;
+            background-position: top 0;
+            background-image: url(../../images/service-highlight-sprite.png);
+        }
+
+        #hl-speed {
+            background-position: -115px;
+        }
+
+        #hl-trusted {
+            background-position: -345px;
+        }
+
+        #hl-simple {
+            background-position: -230px;
+        }
+    </style>
+</head>
+
+<body class="stretched">
+
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+
+
+        <!-- Top Bar
+        ============================================= -->
+        <div id="top-bar">
+
+            <div class="container clearfix">
+
+                <div class="col_half nobottommargin clearfix">
+
+                    <!-- Top Links
+                    ============================================= -->
+                    <div class="top-links">
+                        <ul>
+                            <li><a href="/Home/Index">Home</a></li>
+                            <li><a href="/Home/RechargeStatus">Recharge Status</a></li>
+                            <li>@Html.Action("PartialLogin", new { ReturnUrl = ViewBag.ReturnUrl })</li>
+
+                        </ul>
+                    </div>
+                    <!-- .top-links end -->
+
+                </div>
+
+                <div class="col_half fright col_last clearfix nobottommargin">
+
+                    <!-- Top Social
+                    ============================================= -->
+                    <div id="top-social">
+                        <ul>
+                        </ul>
+                    </div>
+                    <!-- #top-social end -->
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- #top-bar end -->
+
+        <!-- Header
+        ============================================= -->
+        <header id="header" class="full-header">
+
+            <div id="header-wrap">
+
+                <div class="container clearfix">
+
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                    <!-- Logo
+                    ============================================= -->
+                    <div id="logo">
+                        <a href="/Home/Index" class="standard-logo" data-dark-logo="../../images/logo-dark.png">
+                            <img src="../../images/logo.png" alt="Canvas Logo"></a>
+                        <a href="/Home/Index" class="retina-logo" data-dark-logo="../../images/logo-dark@2x.png">
+                            <img src="../../images/logo@2x.png" alt="Canvas Logo"></a>
+                    </div>
+                    <!-- #logo end -->
+
+                    <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu">
+
+                        <ul>
+                            <li><a href="/Home/Index">
+                                <div>Home</div>
+                            </a>
+
+                            </li>
+                            <li><a href="#">
+                                <div>My Account</div>
+                            </a>
+                                <ul>
+                                    <li><a href="/MyAccount/EWallet">
+                                        <div>E-Wallet</div>
+                                    </a></li>
+                                    <li><a href="/MyAccount/History">
+                                        <div>History</div>
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/Home/AboutUs">
+                                <div>About Us</div>
+                            </a>
+
+                            </li>
+                            <li><a href="/Home/ContactUs">
+                                <div>Contact Us</div>
+                            </a>
+
+                            </li>
+                            @* <li class="mega-menu"><a href="#"><div>Shortcodes</div></a>
+                                <div class="mega-menu-content col-5 clearfix">
+                                    <ul>
+                                        <li><a href="animations.html"><div><i class="icon-magic"></i>Animations</div></a></li>
+                                        <li><a href="buttons.html"><div><i class="icon-link"></i>Buttons</div></a></li>
+                                        <li><a href="carousel.html"><div><i class="icon-heart3"></i>Carousel</div></a></li>
+                                        <li><a href="charts.html"><div><i class="icon-bar-chart"></i>Charts</div></a></li>
+                                        <li><a href="clients.html"><div><i class="icon-apple"></i>Clients</div></a></li>
+                                        <li><a href="columns-grids.html"><div><i class="icon-th-large"></i>Columns</div></a></li>
+                                        <li><a href="counters.html"><div><i class="icon-time"></i>Counters</div></a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="dividers.html"><div><i class="icon-indent-right"></i>Dividers</div></a></li>
+                                        <li><a href="featured-boxes.html"><div><i class="icon-lightbulb"></i>Icon Boxes</div></a></li>
+                                        <li><a href="gallery.html"><div><i class="icon-picture"></i>Galleries</div></a></li>
+                                        <li><a href="headings-dropcaps.html"><div><i class="icon-pencil2"></i>Heading Styles</div></a></li>
+                                        <li><a href="icon-lists.html"><div><i class="icon-list-alt"></i>Icon Lists</div></a></li>
+                                        <li><a href="labels-badges.html"><div><i class="icon-plus-sign"></i>Labels</div></a></li>
+                                        <li><a href="lightbox.html"><div><i class="icon-resize-full"></i>Lightbox</div></a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="lists-panels.html"><div><i class="icon-th-list"></i>Lists &amp; Panels</div></a></li>
+                                        <li><a href="maps.html"><div><i class="icon-map-marker2"></i>Maps</div></a></li>
+                                        <li><a href="media-embeds.html"><div><i class="icon-play"></i>Media Embeds</div></a></li>
+                                        <li><a href="modal-popovers.html"><div><i class="icon-move"></i>Modal Boxes</div></a></li>
+                                        <li><a href="navigation.html"><div><i class="icon-align-justify2"></i>Navigations</div></a></li>
+                                        <li><a href="pagination-progress.html"><div><i class="icon-cogs"></i>Pagination</div></a></li>
+                                        <li><a href="pie-skills.html"><div><i class="icon-tasks"></i>Pies &amp; Skills</div></a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="pricing.html"><div><i class="icon-dollar"></i>Pricing Boxes</div></a></li>
+                                        <li><a href="process-steps.html"><div><i class="icon-thumbs-up"></i>Process Steps</div></a></li>
+                                        <li><a href="promo-boxes.html"><div><i class="icon-rocket"></i>Promo Boxes</div></a></li>
+                                        <li><a href="quotes-blockquotes.html"><div><i class="icon-quote-left"></i>Blockquotes</div></a></li>
+                                        <li><a href="responsive.html"><div><i class="icon-laptop2"></i>Responsive</div></a></li>
+                                        <li><a href="sections.html"><div><i class="icon-folder-open"></i>Sections</div></a></li>
+                                        <li><a href="social-icons.html"><div><i class="icon-facebook2"></i>Social Icons</div></a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="style-boxes.html"><div><i class="icon-exclamation-sign"></i>Alert Boxes</div></a></li>
+                                        <li><a href="styled-icons.html"><div><i class="icon-flag2"></i>Styled Icons</div></a></li>
+                                        <li><a href="tables.html"><div><i class="icon-table"></i>Tables</div></a></li>
+                                        <li><a href="tabs.html"><div><i class="icon-star3"></i>Tabs</div></a></li>
+                                        <li><a href="testimonials-twitter.html"><div><i class="icon-user4"></i>Testimonials</div></a></li>
+                                        <li><a href="thumbnails-slider.html"><div><i class="icon-camera3"></i>Thumbnails</div></a></li>
+                                        <li><a href="toggles-accordions.html"><div><i class="icon-ok-circle"></i>Toggles</div></a></li>
+                                    </ul>
+                                </div>
+                            </li>*@
+                        </ul>
+
+                        <!-- Top Cart
+                        ============================================= -->
+                        @*<div id="top-cart">
+                            <a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
+                            <div class="top-cart-content">
+                                <div class="top-cart-title">
+                                    <h4>Shopping Cart</h4>
+                                </div>
+                                <div class="top-cart-items">
+                                    <div class="top-cart-item clearfix">
+                                        <div class="top-cart-item-image">
+                                            <a href="#"><img src="images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
+                                        </div>
+                                        <div class="top-cart-item-desc">
+                                            <a href="#">Blue Round-Neck Tshirt</a>
+                                            <span class="top-cart-item-price">$19.99</span>
+                                            <span class="top-cart-item-quantity">x 2</span>
+                                        </div>
+                                    </div>
+                                    <div class="top-cart-item clearfix">
+                                        <div class="top-cart-item-image">
+                                            <a href="#"><img src="images/shop/small/6.jpg" alt="Light Blue Denim Dress" /></a>
+                                        </div>
+                                        <div class="top-cart-item-desc">
+                                            <a href="#">Light Blue Denim Dress</a>
+                                            <span class="top-cart-item-price">$24.99</span>
+                                            <span class="top-cart-item-quantity">x 3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top-cart-action clearfix">
+                                    <span class="fleft top-checkout-price">$114.95</span>
+                                    <button class="button button-3d button-small nomargin fright">View Cart</button>
+                                </div>
+                            </div>
+                        </div><!-- #top-cart end -->
+
+                        <!-- Top Search
+                        ============================================= -->
+                        <div id="top-search">
+                            <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                            <form action="search.html" method="get">
+                                <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+                            </form>
+                        </div>*@<!-- #top-search end -->
+
+                    </nav>
+                    <!-- #primary-menu end -->
+
+                </div>
+
+            </div>
+
+        </header>
+        <!-- #header end -->
+
+
+        <!-- Page Title
+        ============================================= -->
+        @*<section id="page-title">
+
+            <div class="container clearfix">
+                <h1>My Account</h1>
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li class="active">Login</li>
+                </ol>
+            </div>
+
+        </section>*@<!-- #page-title end -->
+        @RenderSection("featured", required: false)
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+
+                <div class="container clearfix" style="margin-bottom: 41px;">
+
+
+                    @RenderBody()
+
+
+                </div>
+
+
+                <div class="clear"></div>
+
+                <div class="divider divider-short divider-center"><i class="icon-circle"></i></div>
+
+                <div id="section-pricing" class="heading-block title-center page-section">
+                    <h2>Reason to choose Eload</h2>
+                    @*<span>Flexible &amp; Easy Pricing for wide Audience Groups</span>*@
+                </div>
+
+                <div class="pricing bottommargin clearfix">
+
+                    <div class="col-md-3" data-animate="fadeInLeft" data-delay="10">
+
+                        <div class="pricing-box">
+                            <div class="pricing-title">
+                                <span class="icon" id="hl-cost">Low cost</span>
+                                <h3>Low Cost</h3>
+                            </div>
+                            @*<div class="pricing-price">
+                                    <span class="price-unit">&euro;</span>7<span class="price-tenure">/mo</span>
+                                </div>*@
+                            @*<div class="pricing-features">
+                                    <ul>
+                                        <li><strong>Full</strong> Access</li>
+                                        <li><i class="icon-code"></i> Source Files</li>
+                                        <li><strong>100</strong> User Accounts</li>
+                                        <li><strong>1 Year</strong> License</li>
+                                        <li>Phone &amp; Email Support</li>
+                                    </ul>
+                                </div>*@
+                            <div class="pricing-action">
+                                <span>Low fees displayed up-front.Guaranteed exchange rates.</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3" data-animate="fadeInDown" data-delay="20">
+
+                        <div class="pricing-box best-price">
+                            <div class="pricing-title">
+                                <span class="icon" id="hl-speed">Simple</span>
+                                <h3>Fast</h3>
+
+                            </div>
+
+
+                            <div class="pricing-action">
+                                <span>Instant transfer to many countries.Send & receive notifications by SMS and email.</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3" data-animate="fadeInUp" data-delay="30">
+
+                        <div class="pricing-box">
+                            <div class="pricing-title">
+                                <span class="icon" id="hl-simple">Simple</span>
+                                <h3>Simple</h3>
+                            </div>
+
+
+                            <div class="pricing-action">
+                                <span>4/7 service - no agents to visit.Available on computer, smartphone & tablet.</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3" data-animate="fadeInRight" data-delay="40">
+
+                        <div class="pricing-box  best-price">
+                            <div class="pricing-title">
+                                <span class="icon" id="hl-trusted">Trusted</span>
+                                <h3>Trusted</h3>
+                            </div>
+
+                            <div class="pricing-action">
+                                <span>Industry-leading payment security.Rated "Excellent" by our customers on Trustpilot.</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </section>
+        <section id="easy-123">
+            <div class="gr-row row-padded">
+                <div class="col-1-1">
+                    <div class="content top-half">
+                        <h1>Easy as 1-2-3</h1>
+
+                    </div>
+                </div>
+                <div class="col-1-1">
+                    <div class="content bottom-half">
+                        <ul class="clean">
+                            <li>
+                                <p><span><strong>1</strong></span></p>
+                                <strong>Enter Phone Number</strong>
+                            </li>
+                            <li>
+                                <p><span><strong>2</strong></span></p>
+                                <strong>Select Product</strong>
+                            </li>
+                            <li>
+                                <p><span><strong>3</strong></span></p>
+                                <strong>Pay and Recharge</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pay-options">
+            <div class="gr-row row-padded">
+                <h1>Choose how to pay</h1>
+                <h2 class="subheader">Send direct from your bank account or pay by card</h2>
+                <ul class="gr-row">
+                    <li class="col-1-3">
+                        <div class="content">
+                            <span class="icon" id="debit-card">Pay with debit card</span>
+                            <h3>Debit card</h3>
+                        </div>
+                    </li>
+                    <li class="col-1-3">
+                        <div class="content">
+                            <span class="icon" id="credit-card">Pay with credit card</span>
+                            <h3>Credit card</h3>
+                        </div>
+                    </li>
+                    <li class="col-1-3">
+                        <div class="content" style="width: 103%">
+                            <span class="icon" id="bank-transfer">Pay by bank transfer</span>
+                            <h3>Smoovepay Transfer</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="section topmargin-sm nobottommargin">
+
+            <div class="container clearfix">
+
+                <div class="heading-block center">
+                    <h3>Testimonials</h3>
+                    <span>Check out some of our Client Reviews</span>
+                </div>
+
+                <ul class="testimonials-grid grid-3 clearfix nobottommargin">
+                    <li>
+                        <div class="testimonial">
+                            <div class="testi-image">
+                                <a href="#">
+                                    <img src="../../images/testimonials/1.jpg" alt="Customer Testimonails"></a>
+                            </div>
+                            <div class="testi-content">
+                                <p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum repellendus!</p>
+                                <div class="testi-meta">
+                                    John Doe
+                                            <span>XYZ Inc.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="testimonial">
+                            <div class="testi-image">
+                                <a href="#">
+                                    <img src="../../images/testimonials/2.jpg" alt="Customer Testimonails"></a>
+                            </div>
+                            <div class="testi-content">
+                                <p>Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
+                                <div class="testi-meta">
+                                    Collis Ta'eed
+                                            <span>Envato Inc.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="testimonial">
+                            <div class="testi-image">
+                                <a href="#">
+                                    <img src="../../images/testimonials/7.jpg" alt="Customer Testimonails"></a>
+                            </div>
+                            <div class="testi-content">
+                                <p>Fugit officia dolor sed harum excepturi ex iusto magnam asperiores molestiae qui natus obcaecati facere sint amet.</p>
+                                <div class="testi-meta">
+                                    Mary Jane
+                                            <span>Google Inc.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        <!-- #content end -->
+
+        <!-- Footer
+        ============================================= -->
+        <footer id="footer">
+
+            <div class="container">
+
+                <!-- Footer Widgets
+                ============================================= -->
+                <div class="footer-widgets-wrap clearfix">
+
+                    <div class="col_two_third">
+
+                        <div class="col_one_third">
+
+                            <div class="widget clearfix">
+
+                                <img src="../../images/logo.png" alt="" class="footer-logo">
+
+                                <div style="background: url('../../images/world-map.png') no-repeat center center; background-size: 100%;">
+                                    <address>
+                                        <strong>Headquarters:</strong><br>
+                                        10 Ubi Crescent #04-21<br>
+                                        Ubi Techpark, Singapore 408564<br>
+                                    </address>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="col_one_third col_last">
+
+
+
+                        <div class="widget subscribe-widget clearfix">
+                            <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+                            <div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+                            <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+                                <div class="input-group divcenter">
+                                    <span class="input-group-addon"><i class="icon-email2"></i></span>
+                                    <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-success" type="submit">Subscribe</button>
+                                    </span>
+                                </div>
+                            </form>
+                            <script type="text/javascript">
+                                $("#widget-subscribe-form").validate({
+                                    submitHandler: function (form) {
+                                        $(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
+                                        $(form).ajaxSubmit({
+                                            target: '#widget-subscribe-form-result',
+                                            success: function () {
+                                                $(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
+                                                $('#widget-subscribe-form').find('.form-control').val('');
+                                                $('#widget-subscribe-form-result').attr('data-notify-msg', $('#widget-subscribe-form-result').html()).html('');
+                                                SEMICOLON.widget.notifications($('#widget-subscribe-form-result'));
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
+
+                        @* <div class="widget clearfix" style="margin-bottom: -20px;">
+
+                            <div class="row">
+
+                                <div class="col-md-6 clearfix bottommargin-sm">
+                                    <a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+                                        <i class="icon-facebook"></i>
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                    <a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>
+                                        on Facebook</small></a>
+                                </div>
+                                <div class="col-md-6 clearfix">
+                                    <a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
+                                        <i class="icon-rss"></i>
+                                        <i class="icon-rss"></i>
+                                    </a>
+                                    <a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>
+                                        to RSS Feeds</small></a>
+                                </div>
+
+                            </div>
+
+                        </div>*@
+
+                    </div>
+
+                </div>
+                <!-- .footer-widgets-wrap end -->
+
+            </div>
+
+            <!-- Copyrights
+            ============================================= -->
+            <div id="copyrights">
+
+                <div class="container clearfix">
+
+                    <div class="col_half">
+                        Copyrights &copy; 2015 All Rights Reserved by Eload Inc.<br>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!-- #copyrights end -->
+
+        </footer>
+        <!-- #footer end -->
+
+    </div>
+    <!-- #wrapper end -->
+
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script type="text/javascript" src="../../js/functions.js"></script>
+    <script type="text/javascript" src="../../js/handlebars-v2.0.0.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

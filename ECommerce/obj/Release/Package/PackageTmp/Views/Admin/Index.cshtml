@@ -1,0 +1,33 @@
+﻿@model ECommerce.Models.LoginModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Index";
+}
+<div class="col_one_third nobottommargin">
+    
+    <div class="well well-lg nobottommargin">
+        <form id="login-form" name="login-form" class="nobottommargin" action="/Admin/Login" method="post">
+
+            <h3>Admin Login</h3>
+            @Html.ValidationSummary(true)
+            <div class="col_full">
+                <label for="login-form-username">Username:</label>
+                <input type="text" id="UserName" name="UserName" value="" class="required form-control input-block-level" required />
+            </div>
+
+            <div class="col_full">
+                <label for="login-form-password">Password:</label>
+                <input type="password" id="Password" name="Password" value="" class="required form-control input-block-level" required />
+            </div>
+
+            <div class="col_full nobottommargin">
+                <button class="button button-3d nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+                <a href="#" class="fright">Forgot Password?</a>
+                @ViewBag.ErrorLogin
+            </div>
+
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,392 @@
+﻿ 
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/magnific-popup.css" type="text/css" />
+
+    <link rel="stylesheet" href="../../css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--[if lt IE 9]>
+    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/plugins.js"></script>
+
+
+    <script type="text/javascript" src="../../include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="../../include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Document Title
+    ============================================= -->
+    <title>@ViewBag.Title</title>
+
+</head>
+
+<body class="stretched">
+
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+        <!-- Top Bar
+        ============================================= -->
+        <div id="top-bar">
+
+            <div class="container clearfix">
+
+                <div class="col_half nobottommargin clearfix">
+
+                    <!-- Top Links
+                    ============================================= -->
+                    <div class="top-links">
+                        <ul>
+                            <li><a href="/Home/Index">Home</a></li>
+                            <li><a href="/Home/RechargeStatus">Recharge Status</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            @Html.Action("PartialLogin", new { ReturnUrl = ViewBag.ReturnUrl })
+
+                             
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .top-links end -->
+
+                </div>
+
+                <div class="col_half fright col_last clearfix nobottommargin">
+
+                    <!-- Top Social
+                    ============================================= -->
+                    <div id="top-social">
+                        <ul>
+                           
+                        </ul>
+                    </div>
+                    <!-- #top-social end -->
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- #top-bar end -->
+
+        <!-- Header
+        ============================================= -->
+        <header id="header" class="full-header">
+
+            <div id="header-wrap">
+
+                <div class="container clearfix">
+
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                    <!-- Logo
+                    ============================================= -->
+                    <div id="logo">
+                        <a href="/Home/Index" class="standard-logo" data-dark-logo="../../images/logo-dark.png">
+                            <img src="../../images/logo.png" alt="Canvas Logo"></a>
+                        <a href="/Home/Index" class="retina-logo" data-dark-logo="../../images/logo-dark@2x.png">
+                            <img src="../../images/logo@2x.png" alt="Canvas Logo"></a>
+                    </div>
+                    <!-- #logo end -->
+
+                    <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu">
+
+                        <ul>
+                            <li><a href="/Home/Index">
+                                <div>Home</div>
+                            </a>
+                                @*<ul>
+                                    <li><a href="index-corporate.html"><div>Home - Corporate</div></a>
+                                        <ul>
+                                            <li><a href="index-corporate.html"><div>Corporate - Layout 1</div></a></li>
+                                            <li><a href="index-corporate-2.html"><div>Corporate - Layout 2</div></a></li>
+                                            <li><a href="index-corporate-3.html"><div>Corporate - Layout 3</div></a></li>
+                                            <li><a href="index-corporate-4.html"><div>Corporate - Layout 4</div></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index-portfolio.html"><div>Home - Portfolio</div></a>
+                                        <ul>
+                                            <li><a href="index-portfolio.html"><div>Portfolio - Layout 1</div></a></li>
+                                            <li><a href="index-portfolio-2.html"><div>Portfolio - Layout 2</div></a></li>
+                                            <li><a href="index-portfolio-3.html"><div>Portfolio - Masonry</div></a></li>
+                                            <li><a href="index-portfolio-4.html"><div>Portfolio - AJAX</div></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index-blog.html"><div>Home - Blog</div></a>
+                                        <ul>
+                                            <li><a href="index-blog.html"><div>Blog - Layout 1</div></a></li>
+                                            <li><a href="index-blog-2.html"><div>Blog - Layout 2</div></a></li>
+                                            <li><a href="index-blog-3.html"><div>Blog - Layout 3</div></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index-shop.html"><div>Home - Shop</div></a>
+                                        <ul>
+                                            <li><a href="index-shop.html"><div>Shop - Layout 1</div></a></li>
+                                            <li><a href="index-shop-2.html"><div>Shop - Layout 2</div></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index-magazine.html"><div>Home - Magazine</div></a>
+                                        <ul>
+                                            <li><a href="index-magazine.html"><div>Magazine - Layout 1</div></a></li>
+                                            <li><a href="index-magazine-2.html"><div>Magazine - Layout 2</div></a></li>
+                                            <li><a href="index-magazine-3.html"><div>Magazine - Layout 3</div></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="landing.html"><div>Home - Landing Page</div></a>
+                                        <ul>
+                                            <li><a href="landing.html"><div>Landing Page - Layout 1</div></a></li>
+                                            <li><a href="landing-2.html"><div>Landing Page - Layout 2</div></a></li>
+                                            <li><a href="landing-3.html"><div>Landing Page - Layout 3</div></a></li>
+                                            <li><a href="landing-4.html"><div>Landing Page - Layout 4</div></a></li>
+                                            <li><a href="landing-5.html"><div>Landing Page - Layout 5</div></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index-fullscreen-image.html"><div>Home - Full Screen</div></a>
+                                        <ul>
+                                            <li><a href="index-fullscreen-image.html"><div>Full Screen - Image</div></a></li>
+                                            <li><a href="index-fullscreen-slider.html"><div>Full Screen - Slider</div></a></li>
+                                            <li><a href="index-fullscreen-video.html"><div>Full Screen - Video</div></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index-onepage.html"><div>Home - One Page</div></a>
+                                        <ul>
+                                            <li><a href="index-onepage.html"><div>One Page - Default</div></a></li>
+                                            <li><a href="index-onepage-2.html"><div>One Page - Submenu</div></a></li>
+                                            <li><a href="index-onepage-3.html"><div>One Page - Dots Style</div></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index-wedding.html"><div>Home - Wedding</div></a></li>
+                                    <li><a href="index-restaurant.html"><div>Home - Restaurant</div></a></li>
+                                    <li><a href="index-events.html"><div>Home - Events</div></a></li>
+                                    <li><a href="index-parallax.html"><div>Home - Parallax</div></a></li>
+                                    <li><a href="index-app-showcase.html"><div>Home - App Showcase</div></a></li>
+                                </ul>*@
+                            </li>
+                            <li><a href="#">
+                                <div>My Account</div>
+                            </a>
+                                <ul>
+                                    <li><a href="/MyAccount/EWallet">
+                                        <div>E-Wallet</div>
+                                    </a></li>
+                                    <li><a href="/MyAccount/History">
+                                        <div>History</div>
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/Home/Index">
+                                <div>About Us</div>
+                            </a>
+
+                            </li>
+                            <li><a href="/Home/Index">
+                                <div>Contact Us</div>
+                            </a>
+
+                            </li>
+
+                        </ul>
+
+
+
+                    </nav>
+                    <!-- #primary-menu end -->
+
+                </div>
+
+            </div>
+
+        </header>
+        <!-- #header end -->
+
+
+        <!-- Page Title
+        ============================================= -->
+        @*<section id="page-title">
+
+            <div class="container clearfix">
+                <h1>My Account</h1>
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li class="active">Login</li>
+                </ol>
+            </div>
+
+        </section>*@<!-- #page-title end -->
+        @RenderSection("featured", required: false)
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+
+                <div class="container clearfix" style="margin-bottom: 41px;">
+
+
+                    @RenderBody()
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <!-- #content end -->
+
+        <!-- Footer
+        ============================================= -->
+         <footer id="footer">
+
+            <div class="container">
+
+                <!-- Footer Widgets
+                ============================================= -->
+                <div class="footer-widgets-wrap clearfix">
+
+                    <div class="col_two_third">
+
+                        <div class="col_one_third">
+
+                            <div class="widget clearfix">
+
+                                <img src="../../images/logo.png" alt="" class="footer-logo">
+
+                                <div style="background: url('../../images/world-map.png') no-repeat center center; background-size: 100%;">
+                                    <address>
+                                        <strong>Headquarters:</strong><br>
+                                        10 Ubi Crescent #04-21<br>
+                                        Ubi Techpark, Singapore 408564<br>
+                                    </address>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="col_one_third col_last">
+
+
+
+                        <div class="widget subscribe-widget clearfix">
+                            <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+                            <div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+                            <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+                                <div class="input-group divcenter">
+                                    <span class="input-group-addon"><i class="icon-email2"></i></span>
+                                    <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-success" type="submit">Subscribe</button>
+                                    </span>
+                                </div>
+                            </form>
+                            <script type="text/javascript">
+                                $("#widget-subscribe-form").validate({
+                                    submitHandler: function (form) {
+                                        $(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
+                                        $(form).ajaxSubmit({
+                                            target: '#widget-subscribe-form-result',
+                                            success: function () {
+                                                $(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
+                                                $('#widget-subscribe-form').find('.form-control').val('');
+                                                $('#widget-subscribe-form-result').attr('data-notify-msg', $('#widget-subscribe-form-result').html()).html('');
+                                                SEMICOLON.widget.notifications($('#widget-subscribe-form-result'));
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
+
+                        @* <div class="widget clearfix" style="margin-bottom: -20px;">
+
+                            <div class="row">
+
+                                <div class="col-md-6 clearfix bottommargin-sm">
+                                    <a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+                                        <i class="icon-facebook"></i>
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                    <a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>
+                                        on Facebook</small></a>
+                                </div>
+                                <div class="col-md-6 clearfix">
+                                    <a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
+                                        <i class="icon-rss"></i>
+                                        <i class="icon-rss"></i>
+                                    </a>
+                                    <a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>
+                                        to RSS Feeds</small></a>
+                                </div>
+
+                            </div>
+
+                        </div>*@
+
+                    </div>
+
+                </div>
+                <!-- .footer-widgets-wrap end -->
+
+            </div>
+
+            <!-- Copyrights
+            ============================================= -->
+            <div id="copyrights">
+
+                <div class="container clearfix">
+
+                    <div class="col_half">
+                        Copyrights &copy; 2015 All Rights Reserved by Eload Inc.<br>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!-- #copyrights end -->
+
+        </footer>
+        <!-- #footer end -->
+
+    </div>
+    <!-- #wrapper end -->
+
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script type="text/javascript" src="../../js/functions.js"></script>
+    <script type="text/javascript" src="../../js/handlebars-v2.0.0.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
